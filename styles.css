@@ -1,19 +1,67 @@
 /* ==========================================================================
+Colors
+========================================================================== */
+html{
+	--color-black: #000000;
+	--color-blue: #1e88e5;
+	--color-blue-dark:#005cb2;
+	--color-blue-light: #6ab7ff;
+	--color-brown: #6d4c41;
+	--color-brown-dark: #40241a;
+	--color-brown-light: #9c786c;
+	--color-green: #689f38;
+	--color-green-dark: #387002;
+	--color-green-light: #99d066;
+	--color-grey-light: #fafafa;
+	--color-grey-medium: #212121;
+	--color-pink: #f48fb1;
+	--color-pink-dark: #bf5f82;
+	--color-pink-light: #ffc1e3;
+	--color-purple: #7b1fa2;
+	--color-purple-dark: #4a0072;
+	--color-purple-light: #ae52d4;
+	--color-white: #000000;
+}
+/* ==========================================================================
 Typography
 ========================================================================== */
 a{
-	color: #4a0072;
+	color: var(--color-purple-dark);
 	text-decoration: none;
 }
+a:active{
+	background-color: var(--color-pink);
+}
+a:focus{
+	color:var(--color-blue-dark);
+}
+a:hover{
+	text-decoration: underline;
+}
+a:visited{
+	color: var(--color-purple);
+}
+body{
+	font-family: var(--font-primary);
+	line-height: 1.2;
+}
+h1, h2, h3{
+	color: var(--color-brown);
+	margin:1rem;
+}
 html{
-	color: #212121;
+	color: var(--color-grey-medium);
+	--font-primary: 'Catamaran', sans-serif;
+}
+main p{
+	max-width: 35rem;
 }
 /* ==========================================================================
 Header Component
 ========================================================================== */
 header{
-	background-color: #99d066;
-	color:white;
+	background-color: var(--color-green-light);
+	color: var(--color-white);
 	padding: 2rem;
 }
 li{
@@ -28,7 +76,7 @@ ul{
 Footer Component
 ========================================================================== */
 footer{
-	background-color: #bf5f82;
-	color:#fafafa;
+	background-color: var(--color-pink-dark);
+	color:var(--color-grey-light);
 	padding: 2rem;
 }
