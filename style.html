@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Catamaran:400,600|Oleo+Script:400,700&display=swap" rel="stylesheet">
 	<title>Confectionarium Style</title>
 </head>
 
 <body>
 	<header>
-		<a href="index.html"> Confectionarium's Design Treats</a>
+		<a href="index.html" class="logo"> Confectionarium's Design Treats</a>
 
 		<nav>
 			<ul>
@@ -33,6 +33,28 @@
 				<div>
 					<figure>
 						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
+							<rect width="100" height="100"  fill="#689f38" />
+							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Green</text>
+							<text x="50" y="140" text-anchor="middle" font-size="80%">#689f38</text>
+						</svg>
+
+						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
+							<rect width="100" height="100"  fill="#99d066" />
+							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Light Green</text>
+							<text x="50" y="140" text-anchor="middle" font-size="80%">#99d066</text>
+						</svg>
+
+						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
+							<rect width="100" height="100"  fill="#387002" />
+							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Dark Green</text>
+							<text x="50" y="140" text-anchor="middle" font-size="80%">#387002</text>
+						</svg>
+					</figure>
+				</div>
+				
+				<div>
+					<figure>
+						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
 							<rect width="100" height="100"  fill="#7b1fa2" />
 							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Purple</text>
 							<text x="50" y="140" text-anchor="middle" font-size="80%">#7b1fa2</text>
@@ -49,28 +71,6 @@
 							<rect width="100" height="100"  fill="#4a0072" />
 							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Dark Purple</text>
 							<text x="50" y="140" text-anchor="middle" font-size="80%">#4a0072</text>
-						</svg>
-					</figure>
-				</div>
-				
-				<div>
-					<figure>
-						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
-							<rect width="100" height="100"  fill="#689f38" />
-							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Green</text>
-							<text x="50" y="140" text-anchor="middle" font-size="80%">#689f38</text>
-						</svg>
-
-						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
-							<rect width="100" height="100"  fill="#99d066" />
-							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Light Green</text>
-							<text x="50" y="140" text-anchor="middle" font-size="80%">#99d066</text>
-						</svg>
-
-						<svg class="color-swatch" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 100 165" style="max-width: 10rem;">
-							<rect width="100" height="100"  fill="#387002" />
-							<text x="50" y="120" text-anchor="middle" font-weight="bold" font-size="80%">Dark Green</text>
-							<text x="50" y="140" text-anchor="middle" font-size="80%">#387002</text>
 						</svg>
 					</figure>
 				</div>
@@ -167,10 +167,71 @@
 				</div>
 			</section>
 			<section>
-				<h3>Typography</h3>
-				<div>
-					<p>Primary Font: Catamaran</p>
-				</div>
+				<h2>Typography</h2>
+
+				Primary Font: <h5 class="primary-font">Catamaran</h5>
+				Secondary Font: <h5 class="secondary-font">Oleo Script </h5>
+
+				<h3>Headings</h3>
+
+				<figure class="examples">
+					<h1>Heading 1</h1>
+					<h2>Heading 2</h2>
+					<h3>Heading 3</h3>
+					<h4>Heading 4</h4>
+					<h5>Heading 5</h5>
+					<h6>Heading 6</h6>
+				</figure>
+
+				<h3>Body Text</h3>
+
+				<h5>Featured Text</h5>
+				<p class="featured-text">Baking is a timeless tradition. Here at Confectionarium we want to preserve the art of baking and continue to pass along your best recipes to generations of fellow bakers. You can share ideas and recipes and post a photo of a cake or sweet you are especially proud of. </p>
+
+				<h5>Body Copy</h5>
+				<p class="body-copy">Baking is a timeless tradition. Here at Confectionarium we want to preserve the art of baking and continue to pass along your best recipes to <strong>generations</strong> of fellow bakers. You can share ideas and <a href="#">	recipes</a> and post a photo of a cake or <em>sweet</em> you are especially proud of. </p>
+
+				<h5>Tertiary Copy</h5>
+				<p class="tertiary-copy">Baking is a timeless tradition. Here at Confectionarium we want to preserve the art of baking and continue to pass along your best recipes to generations of fellow bakers. You can share ideas and recipes and post a photo of a cake or sweet you are especially proud of.</p>
+
+				<h5>Lists</h5>
+				<h6>Unordered List</h6>
+				<ul>
+					<li>Sprinkles</li>
+					<li>Frosting</li>
+					<li>Cupcakes</li>
+				</ul>
+
+				<h6>Ordered List</h6>
+				<ol>
+					<li>Let cupcakes cool</li>
+					<li>Apply Frosting</li>
+					<li>Add Sprinkles</li>
+				</ol>
+				<figure class="examples">
+					<ol>
+  						<li>Preheat oven to 350 degrees</li>
+ 						 <li>Grease a 9x9 inch pan</li>
+ 						 <li>
+ 						 	Combine the ingredients:
+						    <ul>
+						      <li>Milk</li>
+						      <li>Butter</li>
+						      <li>Eggs</li>
+						    </ul>
+  						</li>
+  						<li>Mix the Batter</li>
+  						<li>Pour Batter into Pan</li>
+  						<li>Bake for 25 min</li>
+					</ol>
+				</figure>
+
+				<h5>Block Quotes</h5>
+				
+				<blockquote>
+					When I got to France I realized I didn't know very much about food at all. I'd never had a real cake. I'd had those cakes from cake mixes or the ones that have a lot of baking powder in them. A really good French cake doesn't have anything like that in it - it's all egg power.<br> <cite>&ndash;Julia Child</cite>
+				</blockquote>
+
 			</section>
 	</main>
 	<footer>
@@ -181,7 +242,7 @@
 			<a href="https://www.google.com/" target="_blank">Behance</a>
 			<a href="https://www.google.com/" target="_blank">Dribble</a>
 		</address>
-		<p>Copyright Chloe Schienbein 2019</p>
+		<p>&copy; Chloe Schienbein 2019</p>
 	</footer>
 </body>
 </html>
