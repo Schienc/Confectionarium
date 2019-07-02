@@ -22,6 +22,7 @@ html{
 	--color-purple-light: #ae52d4;
 	--color-white: #ffffff;
 }
+
 /* ==========================================================================
 Header Component
 ========================================================================== */
@@ -30,19 +31,23 @@ header{
 	color: var(--color-white);
 	padding: 2rem;
 }
+
 .logo {
 	font-family: var(--font-secondary);
 	font-size: var(--size-med);
 	text-shadow: 1px 1px 3px var(--color-purple-light);
 }
+
 nav li{
 	display: inline;
 	padding-right: 1rem;
 }
+
 nav ul{
 	list-style: none;
 	padding: 0;
 }
+
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -64,98 +69,118 @@ html{
 	--size-small: calc( 1rem * var(--ratio) );
 	--size-xsmall: calc( 1rem / 1.1 );
 }
+
 a{
 	color: var(--color-purple-dark);
 	text-decoration: none;
 }
+
 a:visited{
 	color: var(--color-purple);
 }
+
 a:hover{
 	text-decoration: underline;
 }
+
 a:active{
 	background-color: var(--color-pink);
 }
+
 a:focus{
 	color:var(--color-blue-dark);
 }
+
 h1, h2, h3, h4, h5, h6{
 	color: var(--color-purple-dark);
 	margin:.5rem;
 }
+
 h1 {
 	font-size: var(--size-xxlarge);
 	line-height: 1.1;
 }
+
 h2 {
 	color: var(--color-green-dark);
 	font-size: var(--size-xlarge);
 }
+
 h3{
-	color: var(--color-blue-dark);
-	font-size: var(--size-large);
-	letter-spacing: .1em;
-	text-transform: uppercase;
+	color: var(--color-brown-dark);
+	font-size: var(--size-med);
 }
+
 h4{
 	color: var(--color-blue-dark);
 	font-family: var(--font-secondary);
+	font-size: var(--size-large);
+}
+
+h5{
+	color: var(--color-blue-dark);
 	font-size: var(--size-med);
 }
-h5{
-	color: var(--color-brown-dark);
-	font-size: var(--size-small);
-}
+
 h6{
 	background-color: var(--color-green-light);
 	display: inline-block;
 	font-size: var(--size-xsmall);
 	padding: .3em;
 }
+
 @media( min-width: 600px ) {
 	
 	html {
 		--ratio:1.25;		
 		font-size: 17px;
 	}
+
 	
 }
+
 /* ==========================================================================
 Page Layout
 ========================================================================== */
 main {
 	margin: auto;
 	max-width: 40rem;
-	padding: 15px 0 15px 0;
+	padding: 30px 0 30px 0;
 }
+
 body{
 	margin: 0;
 }
+
 /* ==========================================================================
 Examples
 ========================================================================== */
 figure{
 	display: block;
 }
+
 .featured-text{
 	font-size: var(--size-med);
 	line-height: 1.25;
 	margin: .5rem;
 	padding-bottom: 1rem;
 }
+
 .tertiary-copy{
 	font-size: var(--size-xsmall);
 	line-height: 1.4;
 	margin: 2rem;
 }
+
 .secondary-font{
 	display: inline-block;
 	font-family: var(--font-secondary);
 }
+
 .primary-font{
 	display: inline;
 }
+
 blockquote{
 	background-color: var(--color-blue);
 	border-radius: 20px;
@@ -165,27 +190,34 @@ blockquote{
 	padding: 1rem;
 
 }
+
 cite{
 	margin-top: 1rem;
 }
+
+/* ==========================================================================
+Buttons
+========================================================================== */
 .link-button{
 	background-color: var(--color-blue);
 	border: 1px solid var(--color-blue-dark);
 	border-radius: 10px;
-	box-shadow: 1px 1px 2px var(--color-black);
+	box-shadow: 2px 2px 2px var(--color-grey-medium);
 	color: white;
 	font-weight: 600;
 	margin: .5rem;
-	padding: .5rem 1.3rem;
+	padding: .5rem 1.2rem;
 	transition: all .2s ease;
 
 }
+
 .link-button-normal{
 	background-color: var(--color-green);
 	border: 1px solid var(--color-green-dark);
 	font-weight: 400;
 	padding: .4rem 1rem;
 }
+
 .link-button-tertiary{
 	background-color: transparent;
 	border: 1px solid var(--color-grey-medium);
@@ -193,35 +225,110 @@ cite{
 	font-weight: 400;
 	padding: .3rem 1rem;
 }
+
 .link-button:visited{
 	color: white;
 }
+
 .link-button-tertiary:visited{
 	color: var(--color-grey-medium);
 }
+
 .link-button:hover{
-	padding:.6rem 1.5rem;
+	padding:.6rem 1.2rem;
 	text-decoration: none;
 }
+
 .link-button:active{
 	background-color: var(--color-brown-light);
 }
+
 .link-button:focus{
 	border-radius: 15px;
 }
+
+/* ==========================================================================
+Details/Summary
+========================================================================== */
 summary{
 	background-color: var(--color-purple-dark);
 	color: white;
 	outline: none;
 	padding: .5rem;
 }
+
 details{
 	margin: .5rem;
 }
+
 details div{
 	border: 1px solid var(--color-blue-dark); 
 	padding: .5rem;
 }
+/* ==========================================================================
+Dialog
+========================================================================== */
+dialog{
+	background-color: var(--color-white);
+	border: 3px var(--color-blue-dark) solid;
+	border-radius: 20px;
+	max-height: 17rem;
+	max-width: 100%;
+	min-height: 12rem;
+	min-width: 20rem;
+	padding: 0;
+	position: fixed;
+}
+
+dialog p, dialog h5{
+	margin: 1rem;
+}
+
+dialog h5{
+	text-align: center;
+}
+
+dialog .link-button{
+	display: inline-block;
+	margin-right: 0;
+	margin-top: 2.5rem;
+}
+
+dialog[open]{
+	animation: entrance .4s ease-in;
+}
+
+dialog::backdrop{
+	background-color: rgba(230, 240, 142, .6);
+	background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23baa1e1' fill-opacity='0.57'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+dialog[open]::backdrop{
+	animation: fade-in .4s ease; 
+}
+@keyframes entrance{
+	0%{
+		transform: scaleX(0);
+	}
+	
+	70%{
+		transform: scaleX(1.2);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+
+@keyframes fade-in{
+	0%{
+		opacity: .1;
+}
+
+	100%{
+		opacity: 1;
+	}
+}
+
 /* ==========================================================================
 Footer Component
 ========================================================================== */
@@ -231,4 +338,5 @@ footer{
 	font-size: var(--size-xsmall);
 	padding: 2rem;
 }
+
 

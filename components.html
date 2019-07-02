@@ -28,19 +28,19 @@
 		
 		<h2>Button Links</h2>
 		
-		<h5>Hero Button</h5>
+		<h3>Hero Button</h3>
 		
 		<figure>
 			<a href="#" class="link-button">Button</a>
 		</figure>
 
-		<h5>Normal Button</h5>
+		<h3>Normal Button</h3>
 
 		<figure>
 			<a href="#" class="link-button link-button-normal">Button</a>
 		</figure>
 
-		<h5>Tertiary Button</h5>
+		<h3>Tertiary Button</h3>
 
 		<figure>
 			<a href="#" class="link-button link-button-tertiary">Button</a>		
@@ -49,28 +49,43 @@
 		<h2>Accordions</h2>
 		<figure>
 			<details>
-					<summary>Can I save recipes?</summary>
-					<div>
-						<p>You can save recipes to your account by clicking the favorite button in the corner.</p>
-					</div>
+				<summary>Can I save recipes?</summary>
+				<div>
+					<p>You can save recipes to your account by clicking the heart-shaped favorites button in the lower left-hand corner of the recipe. You can access your saved recicpes through your profile page via the drop down menu.</p>
+				</div>
 			</details>
 
 			<details>
-					<summary>How can I edit a post?</summary>
-					<div>
-						<p>On your post, click the pencil icon to edit text and photos.</p>
-					</div>
+				<summary>How do I edit a post?</summary>
+				<div>
+					<p>On your post, click the pencil icon to edit text and photos.</p>
+				</div>
 			</details>
 
 			<details>
-					<summary>Can I disable comments on my post?</summary>
-					<div>
-						<p>You can disable comments in Settings.</p>
-					</div>
+				<summary>Can I disable comments on my post?</summary>
+				<div>
+					<p>You can disable comments in Settings. On the selected post, you will see a settings icon in the top right-hand corner. Click into settings and then check the box to disable comments for that post.</p>
+				</div>
 			</details>
+		</figure>
+
+		<h2>Modal Dialogs</h2>
 			
+		<figure>
+			<button id="open-modal" type="button">Open Modal</button>
+
+			<dialog id="modal-demo-">
+				<h5>Sign In</h5>
+
+				<p>This is a paragraph explaining content to the user.</p>
+	
+				<a href="components.html" class="link-button link-button-normal">Submit</a>
+
+				<a href="components.html" class="link-button link-button-tertiary">Cancel</a>		
 
 
+			</dialog>
 		</figure>
 
 	</main>
@@ -85,5 +100,25 @@
 		</address>
 		<p>&copy; Chloe Schienbein 2019</p>
 	</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+	const modal = document.querySelector('dialog');
+	const open = document.getElementById('open-modal');
+
+	open.addEventListener('click', () => {
+		modal.showModal();
+	});
+
+	modal.addEventListener('click', event => {
+		if (event.target === modal) {
+			modal.close('cancelled');
+		}
+	});
+
+});
+</script>
+
 </body>
 </html>
