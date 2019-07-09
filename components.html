@@ -6,12 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Catamaran:400,600|Oleo+Script:400,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/7325c02064.js"></script>
 	<title>Confectionarium's Design Treats</title>
 </head>
 
 <body>
 	<header>
-		<a href="index.html" class="logo"> Confectionarium's Design Treats</a>
+		<a href="index.html" class="logo">Confectionarium's Design Treats</a>
 
 		<nav>
 			<ul>
@@ -51,7 +52,7 @@
 			<details>
 				<summary>Can I save recipes?</summary>
 				<div>
-					<p>You can save recipes to your account by clicking the heart-shaped favorites button in the lower left-hand corner of the recipe. You can access your saved recicpes through your profile page via the drop down menu.</p>
+					<p>You can save recipes to your account by clicking the heart-shaped favorites button in the lower left-hand corner of the recipe. You can access your saved recipes through your profile page via the drop down menu.</p>
 				</div>
 			</details>
 
@@ -87,6 +88,68 @@
 
 			</dialog>
 		</figure>
+
+		<h2>Form Inputs</h2>
+
+		<h3>Text Input</h3>
+
+		<figure>
+			<form action="">
+				<label for="name">First Name</label>
+
+				<p class="help-copy">This is help text.</p>
+
+				<input type="text" id="name" name="name" placeholder="John" required>
+		
+				<label for="middlename">Middle Name</label>
+
+				<input type="text" id="middlename" name="middlename" disabled>
+
+				<label for="Last Name">Last Name</label>
+
+				<input type="text" id="lastname" name="lastname" class="error" required>
+
+				<p class="error-copy">Error message here</p>
+			</form>
+		</figure>
+
+		<h3>Text Area</h3>
+		
+		<figure>
+			<form action="">
+				<label for="instructions">Delivery Instructions</label>
+
+				<textarea placeholder="Please share any delivery instructions for the driver."></textarea>
+			</form>
+		</figure>
+
+		<h3>Select</h3>
+
+		<figure>
+			<form action="">
+				<label>Toppings</label>
+
+				<select>
+					<option value="" selected hidden disabled>Please Select</option>
+					<option>Sprinkles</option>
+					<option>M&M's</option>
+					<option>Chocolate Chips</option>
+				</select>
+			</form>
+		</figure>
+
+		<h3>Submit/Button</h3>
+
+		<figure>
+			<p>Button</p>
+				
+			<button>Sign Up</button>
+				
+			<p>Button with Icon</p>
+				
+			<button class="btn-icon"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+		</figure>
+
 
 	</main>
 
