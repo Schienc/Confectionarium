@@ -103,9 +103,9 @@
 		
 				<label for="middlename">Middle Name</label>
 
-				<input type="text" id="middlename" name="middlename" disabled>
+				<input type="text" id="middlename" name="middlename" class="disabled">
 
-				<label for="Last Name">Last Name</label>
+				<label for="lastname">Last Name</label>
 
 				<input type="text" id="lastname" name="lastname" class="error" required>
 
@@ -119,7 +119,18 @@
 			<form action="">
 				<label for="instructions">Delivery Instructions</label>
 
-				<textarea placeholder="Please share any delivery instructions for the driver."></textarea>
+				<textarea type="text" id="instructions" name="instructions" placeholder="Please share any delivery instructions for the driver."></textarea>
+
+				<label for="instructions">Delivery Instructions</label>
+
+				<textarea type="text" id="instructions" name="instructions" class="error" placeholder="Please share any delivery instructions for the driver."></textarea>
+
+				<p class="error-copy">This field is required.</p>
+
+				<label for="instructions">Delivery Instructions</label>
+
+				<textarea type="text" id="instructions" name="instructions" class="disabled"></textarea>
+
 			</form>
 		</figure>
 
@@ -127,10 +138,19 @@
 
 		<figure>
 			<form action="">
-				<label>Toppings</label>
+				<label for="select">Toppings</label>
 
-				<select>
-					<option value="" selected hidden disabled>Please Select</option>
+				<select id="select" name="select">
+					<option selected hidden disabled>Please Select</option>
+					<option>Sprinkles</option>
+					<option>M&M's</option>
+					<option>Chocolate Chips</option>
+				</select>
+
+				<label for="select">Toppings</label>
+
+				<select id="select" name="select" class="error">
+					<option selected hidden disabled>Please Select</option>
 					<option>Sprinkles</option>
 					<option>M&M's</option>
 					<option>Chocolate Chips</option>
@@ -147,10 +167,71 @@
 				
 			<p>Button with Icon</p>
 				
-			<button class="btn-icon"><i class="fas fa-cart-plus"></i>Add to Cart</button>
+			<button class="button-icon"><img src="images/cartsmall.png" alt="add to cart." class="button-image" />Add to Cart</button>
 		</figure>
 
+		<h2>Information Cards</h2>
+		
+		<h3>Article/Post</h3>
 
+		<figure>
+			<section class="article-card">				
+				<img src="images/article-photo.jpg" alt="Stack of Cookies" class="article-image">
+
+				<h3>Quest for the Perfect Chocolate Chip Cookie</h3>
+
+				<p class="tertiary-copy">David Leite - July 9 2008</p>
+
+				<p class="tertiary-copy">Made from nothing more than flour, eggs, sugar, leavening agents, salt, and chocolate, the cookie seems idiot-proof. After all, it’s simple enough that an eighth-grader can make it, right?</p>
+
+				<a href="https://cooking.nytimes.com/recipes/1015819-chocolate-chip-cookies" target="blank" class="article-link">Read More</a>
+			</section>
+		</figure>
+
+		<h3>Person/Profile</h3>
+
+		<figure>
+			<section class="profile-card">
+				<h4>Mary Berry</h4>
+
+				<img src="images/mary-berry.jpg" alt="Mary Berry" class="profile-image">
+
+				<a href="mailto:mary.bakes@bbc.com">mary.bakes@bbc.com</a> 
+
+				<a href="tel:555-555-5555">555-555-BAKE</a>
+			</section>
+		</figure>
+
+		<h2>Notifications</h2>
+
+		<figure>
+			<div>
+				<section class="notification error">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+
+					<p>Error Message Here</p>		
+		
+				</section>
+
+				<section class="notification warning">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12" y2="17"></line></svg>
+
+					<p>Warning Message Here</p>					
+				</section>
+
+				<section class="notification neutral">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+
+					<p>Neutral Message Here</p>
+				</section>
+
+				<section class="notification success">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+
+					<p>Success Message Here</p>
+				</section>
+			</div>
+		</figure>
 	</main>
 
 	<footer>

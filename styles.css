@@ -21,6 +21,8 @@ html{
 	--color-purple-dark: #4a0072;
 	--color-purple-light: #ae52d4;
 	--color-white: #ffffff;
+	--color-red: #ff0000;
+	--color-yellow: #daa520;
 }
 
 /* ==========================================================================
@@ -170,7 +172,6 @@ figure{
 .tertiary-copy{
 	font-size: var(--size-xsmall);
 	line-height: 1.4;
-	margin: 2rem;
 }
 
 .secondary-font{
@@ -327,7 +328,7 @@ dialog[open]::backdrop{
 Forms
 ========================================================================== */
 form{
-	background-color: lemonchiffon;
+	background-color: var(--color-green-light);
 	padding: 1rem;
 }
 
@@ -358,15 +359,13 @@ input:not([type=submit]), textarea {
 }
 
 input:focus, select:focus, textarea:focus{
-	border-style: none;
+	border-style: transparent;
  	box-shadow: 3px 3px 3px var(--color-green-dark);
  	outline: none;
-
 }
 
 .error{
-	border: 1.5px solid red;
-
+	border: 1.5px solid var(--color-red);
 }
 
 .error-copy{
@@ -379,7 +378,7 @@ input:focus, select:focus, textarea:focus{
 .help-copy{
 	color: var(--color-purple-dark);	
 	font-size: var(--size-xxsmall);
-	margin: .2rem 0 .2rem 0;
+	margin: .2rem 0;
 }
 
 input[type=submit], button{
@@ -391,42 +390,113 @@ input[type=submit], button{
 	padding: .7rem;
 }
 
-.btn-icon{
-	background-color: darkorange;
-	border: 2px solid darkorange;
+.button-icon{
+	background-color: var(--color-grey-light);
+	border: 1px solid var(--color-brown-light);
 	border-radius: 20px;
-	color: white;
+	color: var(--color-grey-medium);
 	padding: 1rem;
 }
 
-i{
+.button-image{
 	color: darkblue;
-	margin-right: .5rem;
+	margin-right: .4rem;
 }
 
-input[type=submit]:hover, button:hover, .btn-icon:hover{
+input[type=submit]:hover, button:hover{
 	background-color: var(--color-pink-light);
 	border: 1px solid var(--color-brown-dark);
 	color: black;
 	cursor: pointer;
 }
 
-input[type=submit]:active, button:active, .btn-icon:active{
+input[type=submit]:active, button:active, .button-icon:active{
 	background-color: var(--color-pink-light);
 	color: black;
 	cursor: pointer;
 }
 
-input[type=submit]:focus, button:focus, .btn-icon:focus{
+input[type=submit]:focus, button:focus, .button-icon:focus{
 	background-color: var(--color-pink-light);
 	color: black;
 	cursor: pointer;
 	outline: none;
 }
 
+.disabled{
+	background-color: var(--color-grey-light);
+	cursor: not-allowed;
+}
+/* ==========================================================================
+Information Cards
+========================================================================== */
+.article-card{
+	align-items: center;
+	background-color: white;
+	border: .03px solid var(--color-grey-medium);
+	box-shadow: 1px 2px 6px var(--color-grey-medium);
+	display: flex;
+	flex-direction: column;
+	max-width: 50%;
+	padding: 1rem;
+}
+
+.article-link{
+	margin-left: auto;
+}
+
+.profile-card{
+	align-items: center;
+	background-image: url(images/profile-background.jpeg);
+	border-radius: 10px;
+	box-shadow: 1px 1px 3px var(--color-purple-dark);
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	max-width: 75%;
+	padding: .5rem;
+}
+
+.profile-image{
+	margin-bottom: 1rem;
+}
+/* ==========================================================================
+Notifications
+========================================================================== */
+.notification{
+	align-items: baseline;
+	border: 2px solid var(--color-grey-light);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	margin-bottom: 1rem;
+	max-width: 40%;
+}
+
+.error{
+	box-shadow: 1px 2px 3px var(--color-red);
+	color: var(--color-red);
+}
+
+.warning{
+	box-shadow: 1px 2px 3px var(--color-yellow);
+	color: var(--color-yellow);
+}
+
+.neutral{
+	box-shadow: 1px 2px 3px var(--color-purple-dark);
+	color: var(--color-purple-dark);
+}
+
+.success{
+	box-shadow: 2px 3px 3px var(--color-green);
+	color: var(--color-green-dark);
+}
+
 /* ==========================================================================
 Footer Component
-========================================================================== */
+========================================================================= */
 footer{
 	background-color: var(--color-pink-light);
 	color:var(--color-black);
