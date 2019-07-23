@@ -156,6 +156,236 @@ body{
 }
 
 /* ==========================================================================
+Article Grid
+========================================================================== */
+@media (min-width: 400px){
+	.article-grid {
+		align-items: center;
+		background-color: rgba(33, 33, 33, .05);
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-row-gap: 1rem;
+		justify-items: center;
+		max-width: 800px;
+		padding: 1rem;
+	}
+}
+@media (min-width: 600px){
+	.article-grid{
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 1000px;
+	}
+}
+
+@media (min-width: 1000px){
+
+	.article-grid{
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 1500px;
+		grid-column-gap: 1rem; 
+	}
+}
+
+.article-grid a{
+	color: white;
+	text-decoration: none;
+}
+
+.articles{
+	background-repeat: no-repeat;
+	border: 1px solid var(--color-grey-medium);
+	min-height: 400px;
+	min-width: 300px;
+	position: relative;
+}
+
+.articles p{
+	background-color: var(--color-brown-dark);
+	display: inline-block;
+	margin-left: .5rem;
+	margin-top: .5rem;
+	opacity: 0;
+	padding: .3rem;
+}
+
+.articles svg{
+	left: 15rem;
+	opacity: 0;
+	position: absolute;
+	top: .5rem;
+}
+
+.articles:hover p, .articles:hover svg{
+	opacity: 1;	
+}
+
+.article-1{
+	background-image: url(images/image-11.jpg);
+}
+
+.article-2{
+	background-image: url(images/image-1.jpg);
+}
+
+.article-3{
+	background-image: url(images/image-2.jpg);
+}
+
+.article-4{
+	background-image: url(images/image-4.jpg);
+}
+
+.article-5{
+	background-image: url(images/image-3.jpeg);
+}
+
+.article-6{
+	background-image: url(images/image-5.jpg);
+}
+
+.article-7{
+	background-image: url(images/image-6.jpg);
+}
+
+.article-8{
+	background-image: url(images/image-12.jpg);
+}
+
+.article-9{
+	background-image: url(images/image-7.jpg);
+}
+
+.article-10{
+	background-image: url(images/image-8.jpg);
+}
+
+.article-11{
+	background-image: url(images/image-9.jpeg);
+}
+
+.article-12{
+	background-image: url(images/image-10.jpeg);
+}
+
+/* ==========================================================================
+People Grid
+========================================================================== */
+@media (min-width: 400px){
+	.people-grid{
+		background-color: black;
+		box-shadow: 1px 2px 3px black;
+		margin: 1rem;
+		max-height: 1000px
+		max-width: 400px;
+	}
+	.persons a{
+		left: 2rem;
+		opacity: 0;
+		position: absolute;
+		bottom: 1rem;
+	}
+
+	.information a{
+		left: 20rem;
+		opacity: 0;
+		position: absolute;	
+	}
+
+	.information img{
+		border-radius: 5px;
+		bottom: 1rem;
+		left: 1rem;
+		opacity: 0;
+		position: absolute;
+	}
+}
+
+@media (min-width: 600px){
+	.people-grid{
+		display: grid;
+ 		grid-template-columns: 3fr 2fr;
+		grid-template-rows: 20rem;
+		min-height: 680px;
+		max-width: 900px;
+	}	
+	.persons a{
+		left: 2rem;
+		opacity: 1;
+		position: absolute;
+		bottom: 1rem;
+	}	
+
+	.information a{
+		left: 20rem;
+		opacity: 1;
+		position: absolute;	
+	}
+
+	.information img{
+		border-radius: 5px;
+		bottom: 1rem;
+		left: 1rem;
+		opacity: 1;
+		position: absolute;
+	}
+
+}
+
+.persons{
+	background-repeat: no-repeat;
+}
+
+.person-1{
+	background-image: url(images/paul-hollywood.jpg);
+	position: relative;
+}
+
+.person-2{
+	background-image: url(images/nadiya-hussain-resize.jpg);
+	position: relative;
+}
+
+.person-3{
+	background-image: url(images/howard-middleton-resize.jpg);
+	grid-column-start: 2;
+	grid-column-end: 3;
+	position: relative;
+}
+
+.information{
+	background-image: url(images/book-background.jpg);
+	position: relative;
+}
+
+.persons p{
+	background-color: white;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0 0 0 1rem;
+	padding: .3rem;
+}
+
+.information p{
+	background-color: transparent;
+	font-weight: 600;
+	max-width: 22rem;
+	text-align: center;
+}
+
+.information h4{
+	font-size: var(--size-small);
+	margin-left: .5rem;
+}
+
+.people-grid h3{
+	color: var(--color-grey-light);
+	text-shadow: 1px 1px 2px black;
+}
+
+.person-3 h3{
+	color: black;
+}
+/* ==========================================================================
 Examples
 ========================================================================== */
 figure{
@@ -431,14 +661,11 @@ input[type=submit]:focus, button:focus, .button-icon:focus{
 Information Cards
 ========================================================================== */
 .article-card{
-	align-items: center;
 	background-color: white;
 	border: .03px solid var(--color-grey-medium);
 	box-shadow: 1px 2px 6px var(--color-grey-medium);
-	display: flex;
-	flex-direction: column;
-	max-width: 50%;
 	padding: 1rem;
+	text-align: center;
 }
 
 .article-link{
@@ -446,32 +673,52 @@ Information Cards
 }
 
 .profile-card{
-	align-items: center;
 	background-image: url(images/profile-background.jpeg);
 	border-radius: 10px;
 	box-shadow: 1px 1px 3px var(--color-purple-dark);
-	display: flex;
-	flex-direction: column;
 	margin: 0;
 	max-width: 75%;
 	padding: .5rem;
+	text-align: center;
 }
 
 .profile-image{
 	margin-bottom: 1rem;
 }
+
+.contact-link{
+	display: block;
+}
+
+@media (min-width: 600px) {
+
+	.article-card, .profile-card{
+		max-width: 50%;
+	}
+	
+	.profile-image{
+		max-width: 300px;
+		max-height: 200px;
+	}
+}
+
+@media (max-width: 600px) {
+	.profile-image{
+		max-width: 200px;
+		max-height: 300px;
+	}
+}
 /* ==========================================================================
 Notifications
 ========================================================================== */
 .notification{
-	align-items: baseline;
+	align-items: center;
 	border: 2px solid var(--color-grey-light);
 	border-radius: 5px;
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-around;
 	margin-bottom: 1rem;
-	max-width: 40%;
 }
 
 .error{
@@ -493,6 +740,14 @@ Notifications
 	box-shadow: 2px 3px 3px var(--color-green);
 	color: var(--color-green-dark);
 }
+
+@media (min-width: 600px){
+
+	.notification{
+		max-width: 50%;
+	}
+}
+
 
 /* ==========================================================================
 Footer Component
